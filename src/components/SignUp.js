@@ -31,7 +31,7 @@ function SignUp() {
             validationErrors.password === ''
         ) {
             axios
-                .post('http://localhost:8081/signup', values)
+                .post('http://localhost:5000/api/auth/register', values)
                 .then((res) =>{
                     navigate('/Login')
                 })

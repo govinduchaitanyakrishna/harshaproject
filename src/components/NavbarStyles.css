@@ -1,6 +1,7 @@
 
 
 .NavbarItems {
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,11 +9,11 @@
     padding: 0 30px;
     background-color: #f9aaaa90;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-    width: 95%;
-    height: 80px;
+    width: 100%;
+    height: 60px;
     border-radius: 13px;
     position: fixed;
-    top: 20px;
+    top: 0px;
     left: 50%;
     transform: translate(-50%);
   }

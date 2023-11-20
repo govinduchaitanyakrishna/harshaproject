@@ -19,11 +19,11 @@ function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const validationErrors = Validation(values);
-        setErrors(validationErrors);
-        if (validationErrors.email === "" && validationErrors.password === "") {
+        // const validationErrors = Validation(values);
+        // setErrors(validationErrors);
+        // if (validationErrors.email === "" && validationErrors.password === "") {
             axios
-                .post("http://localhost:8081/login", values)
+                .post("http://localhost:5000/api/auth/login", values)
                 .then((res) => {
                     if (res.data === "success") {
                         navigate("/Home");
@@ -32,7 +32,7 @@ function Login() {
                     }
                 })
                 .catch((err) => console.log(err));
-        }
+        // }
     };
 
     return (
