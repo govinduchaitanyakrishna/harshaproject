@@ -24,23 +24,24 @@ function SignUp() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const validationErrors = Validation(values);
-        setErrors(validationErrors);
-        if (
-            validationErrors.firstname === '' &&
-            validationErrors.lastname === '' &&
-            validationErrors.email === '' &&
-            // validationErrors.password === '' &&
-            validationErrors.phone === '' &&
-            validationErrors.role === ''
-        ) {
+        // const validationErrors = Validation(values);
+        // console.log(validationErrors)
+        // setErrors(validationErrors);
+        // if (
+        //     validationErrors.firstname === '' &&
+        //     validationErrors.lastname === '' &&
+        //     validationErrors.email === '' &&
+        //     // validationErrors.password === '' &&
+        //     validationErrors.phone === '' &&
+        //     validationErrors.role === ''
+        // ) {
             axios
                 .post('http://localhost:5000/api/auth/register', values)
                 .then((res) =>{
                     navigate('/Login')
                 })
                 .catch((err) => console.log(err));
-        }
+        // }
     };
 
     return (
@@ -59,7 +60,7 @@ function SignUp() {
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.firstname && <span className='text-danger'>{errors.firstname}</span>}
+                        {errors?.firstname && <span className='text-danger'>{errors?.firstname}</span>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='Lastname'>
@@ -72,7 +73,7 @@ function SignUp() {
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.lastname && <span className='text-danger'>{errors.lastname}</span>}
+                        {errors?.lastname && <span className='text-danger'>{errors?.lastname}</span>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='email'>
@@ -85,7 +86,7 @@ function SignUp() {
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.email && <span className='text-danger'>{errors.email}</span>}
+                        {errors?.email && <span className='text-danger'>{errors?.email}</span>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='password'>
@@ -102,20 +103,20 @@ function SignUp() {
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='phone'>
-                            <strong>Role</strong>
+                            <strong>Phone Number</strong>
                         </label>
                         <input
-                            type='number'
+                            type='tel'
                             placeholder='Phone Number'
                             name='phone'
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.phone && <span className='text-danger'>{errors.phone}</span>}
+                        {errors?.phone && <span className='text-danger'>{errors?.phone}</span>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='role'>
-                            <strong>Phone</strong>
+                            <strong>Role</strong>
                         </label>
                         <input
                             type='text'
@@ -124,7 +125,7 @@ function SignUp() {
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.role && <span className='text-danger'>{errors.role}</span>}
+                        {errors?.role && <span className='text-danger'>{errors?.role}</span>}
                     </div>
                     <button type='submit' className='btn btn-success w-100 rounded-0'>
                         Sign Up
