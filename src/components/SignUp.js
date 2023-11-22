@@ -9,7 +9,9 @@ function SignUp() {
         firstname: '',
         lastname: '',
         email: '',
-        password: ''
+        password: '',
+        phone: '',
+        role:""
     });
     const navigate=useNavigate();
     
@@ -28,7 +30,9 @@ function SignUp() {
             validationErrors.firstname === '' &&
             validationErrors.lastname === '' &&
             validationErrors.email === '' &&
-            validationErrors.password === ''
+            // validationErrors.password === '' &&
+            validationErrors.phone === '' &&
+            validationErrors.role === ''
         ) {
             axios
                 .post('http://localhost:5000/api/auth/register', values)
@@ -94,7 +98,33 @@ function SignUp() {
                             onChange={handleInput}
                             className='form-control rounded-0'
                         />
-                        {errors.password && <span className='text-danger'>{errors.password}</span>}
+                        {/* {errors.password && <span className='text-danger'>{errors.password}</span>} */}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='phone'>
+                            <strong>Role</strong>
+                        </label>
+                        <input
+                            type='number'
+                            placeholder='Phone Number'
+                            name='phone'
+                            onChange={handleInput}
+                            className='form-control rounded-0'
+                        />
+                        {errors.phone && <span className='text-danger'>{errors.phone}</span>}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='role'>
+                            <strong>Phone</strong>
+                        </label>
+                        <input
+                            type='text'
+                            placeholder='Role'
+                            name='role'
+                            onChange={handleInput}
+                            className='form-control rounded-0'
+                        />
+                        {errors.role && <span className='text-danger'>{errors.role}</span>}
                     </div>
                     <button type='submit' className='btn btn-success w-100 rounded-0'>
                         Sign Up
