@@ -11,9 +11,13 @@ function Service() {
       state: 'Andhra Pradesh',
       district: 'Anantapur',
       rainfallMonsoon: 100000.0,
-      // Add other fields as needed
     },
-    // Add other data objects
+    {
+      id:2,
+      state:'Hyderabad',
+      district:'Telengana',
+      rainfallMonsoon:30000.0,
+    }
   ];
 
   const handleSearchInputChange = (event) => {
