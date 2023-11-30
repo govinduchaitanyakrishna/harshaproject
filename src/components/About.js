@@ -66,7 +66,7 @@ const About = () => {
                 <ul className="nav nav-tabs" role="tablist">
                   {/* Fix the class for the second tab link */}
                   <li className="nav-item">
-                    <a
+                    <a 
                       className={`nav-link ${activeTab === "aboutMe" ? "active" : ""}`}
                       id="aboutMe-tab"
                       onClick={() => handleTabClick("aboutMe")}
