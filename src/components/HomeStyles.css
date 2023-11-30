@@ -1,7 +1,122 @@
-.home{
-    width: 100%;
-    height: 100vh;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%,
-    rgba(255,234,188,1) 100%);
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container for the content */
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+/* Welcome section container */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh; /* Set the height to 60% of the viewport height */
+  margin: 50px 0;
+}
+
+/* Welcome section heading with rainbow color transition */
+.welcome-container h1 {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  /* 3D effect */
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  transform: perspective(100px) rotateX(10deg);
+  /* Rainbow color transition animation */
+  background-clip: text;
+  color: transparent;
+  animation: rainbowText 5s infinite linear;
+  /* Transition for a smoother effect */
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+/* Rainbow color transition animation keyframes */
+@keyframes rainbowText {
+  0% { background-image: linear-gradient(45deg, #ff0000, #ff9900); }
+  20% { background-image: linear-gradient(45deg, #ff9900, #ffff00); }
+  40% { background-image: linear-gradient(45deg, #ffff00, #33cc33); }
+  60% { background-image: linear-gradient(45deg, #33cc33, #3399ff); }
+  80% { background-image: linear-gradient(45deg, #3399ff, #cc66ff); }
+  100% { background-image: linear-gradient(45deg, #cc66ff, #ff0000); }
+}
+
+/* Welcome section image */
+.welcome-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+/* Font change animation keyframes */
+/* Font change animation keyframes */
+@keyframes fontChange {
+  0%, 100% { font-family: 'Hedvig Letters Sans', sans-serif; }
+  25% { font-family: 'Noto Sans Pahawh Hmong', sans-serif; }
+  50% { font-family: 'AnotherFont', sans-serif; } /* Add your third font here */
+  75% { font-family: 'YetAnotherFont', sans-serif; } /* Add your fourth font here */
+  100% { font-family: 'Hedvig Letters Sans', sans-serif; }
+}
+.welcome-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #ecf0f1; /* Set your desired background color for the image */
+}
+
+@keyframes waterRipple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply water ripple effect to the welcome container */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  margin: 70px 0;
+  background-color: #3498db; /* Set your desired background color for the water effect */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply water ripple effect to the welcome container background */
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, transparent 10%, rgba(255, 255, 255, 0.8) 70%);
+  background-size: 500% 500%;
+  animation: waterRipple 2s infinite ease-in-out;
 }

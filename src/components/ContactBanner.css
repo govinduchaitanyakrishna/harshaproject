@@ -1,0 +1,44 @@
+/* ContactBanner.css */
+
+.contactbanner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height based on your design */
+    max-width: 600px; /* Set your desired maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .container {
+    background-color: #84bdf9;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px 5px;
+  }
+  
+  .contactbanner__heading {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  .contactbanner__button {
+    background-color: #ffffff;
+    color: #007bff;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px 5px;
+    text-decoration: none;
+  }
+  
+  .contactbanner__button:hover {
+    background-color: #e6e6e6;
+  }
+  @media only screen and(max-width:768px) {
+    .contactbanner__heading{
+        font-size: ;
+    }
+  }
