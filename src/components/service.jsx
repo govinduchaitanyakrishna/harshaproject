@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './service.css';
-import styled from 'styled-components';
 
 function Service() {
   const [searchInput, setSearchInput] = useState('');
@@ -20,10 +19,14 @@ function Service() {
   const handleSearchInputChange = (event) => {
     const { value } = event.target;
     setSearchInput(value);
+    if (value === "")return setFilteredData([]);
     const filteredData = dummyData.filter(
-      (item) =>
-        item.state.toLowerCase().includes(value.toLowerCase()) ||
-        item.district.toLowerCase().includes(value.toLowerCase())
+      (item) =>{ 
+        if(item.state.toLowerCase().includes(value.toLowerCase()) || item.district.toLowerCase().includes(value.toLowerCase())){
+          return item
+        }
+        return 
+      }
     );
     setFilteredData(filteredData);
   };
