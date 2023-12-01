@@ -51,14 +51,18 @@ router.post('/login',(req,res) => {
 
 //profile
 router.get('/userInfo',(req,res) => {
-    var token = req.headers['x-access-token'];
-    if(!token) return res.status(500).send({auth:false,token:'No Token Provided'})
-    jwt.verify(token, config.secret, (err,user) => {
-        if(err) return res.status(500).send({auth:false,token:'Invalid Token'})
-        User.findById(user.id,(err,result) => {
+    try{
+        var token = req.headers['x-access-token'];
+        if(!token) return res.status(500).send({auth:false,token:'No Token Provided'})
+        jwt.verify(token, config.secret, (err,user) => {
+            if(err) return res.status(500).send({auth:false,token:'Invalid Token'})
+            const foundUser = User.findById(user.id)
+            if(!foundUser) return res.status(400).send({message: "User not Found"})
             res.send(result)
         })
-    })
+    }catch(err){
+        console.log(err)
+    }
 })
 
 
