@@ -88,7 +88,8 @@ export default function Footer() {
               {
                 type: 'links',
                 title: 'Services',
-                path: '/services',
+                path: '/comicgpt',
+                path1:'/comicbites'
               },
             ]}
           />
@@ -134,7 +135,7 @@ export default function Footer() {
       </div>
       <div className="copyright">
         <div className="container">
-          <p>Copyright &copy; 2023 Harshavardhan Govindu</p>
+          <p>Copyright &copy; 2024 Harshavardhan Govindu</p>
         </div>
       </div>
     </FooterStyles>

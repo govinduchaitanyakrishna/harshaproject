@@ -13,9 +13,22 @@ export const MenuData = [
   },
   {
     title: "Service",
-    url: "/service",
     cName: "nav-links",
-    icon: "fa-solid fa-briefcase"
+    icon: "fa-solid fa-briefcase",
+    submenu: [
+      {
+        title: "comicgpt",
+        url: "/comicgpt",
+        cName: "nav-links-sub",
+        icon: "fa-solid fa-bomb"
+      },
+      {
+        title: "comicbites",
+        url: "/comicbites",
+        cName: "nav-links-sub",
+        icon: "fa-solid fa-image"
+      }
+    ]
   },
   {
     title: "Blog",

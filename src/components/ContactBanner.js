@@ -53,7 +53,7 @@ export default function MyPage() {
       <ContactBannerStyles>
         <div className="container">
           <div className="contactBanner__wrapper">
-            <p>Have any doubt in mind about WaterMap</p>
+            <p>Have any doubt in mind about Comic-con</p>
             <h3 className="contactBanner__header">Let me help you</h3>
             <Button className="custom-button" href="/contact">
               Contact Now

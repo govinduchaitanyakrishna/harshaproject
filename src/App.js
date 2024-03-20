@@ -1,7 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { render } from 'react-dom';
-import { BrowserRouter as Router, Routes, Route, redirect } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -11,15 +10,14 @@ import About from "./components/About";
 import Contact from "./components/contact";
 import Footer from "./components/Footer";
 import Blog from "./components/blog";
-import Service from "./components/service";
-
-// import WaterMap from "./components/waterMap"; // Import the WaterMap component
+import ComicBites from "./components/comicbites";
+import ComicGPT from "./components/comicgpt";
 
 export default function App() {
   return (
     <Router>
       <div className="App">
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
@@ -27,18 +25,10 @@ export default function App() {
           <Route path="/contact" element={<Contact/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/blog" element={<Blog/>} />
-          <Route path="/service" element={<Service/>} />
-          {/* <Route
-            path="/"
-            element={
-              <div>
-               
-                <Home />
-              </div>
-            }
-          /> */}
+          <Route path="/comicbites" element={<ComicBites />} />
+          <Route path="/comicGPT" element={<ComicGPT/>} />
         </Routes>
-      <Footer/>
+        <Footer/>
       </div>
     </Router>
   );

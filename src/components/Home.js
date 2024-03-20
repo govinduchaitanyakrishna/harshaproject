@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <div className="welcome-container">
-        <h1>Welcome to My WaterMap</h1>
+        <h1>Welcome to Comic-con</h1>
       </div>
       <ContactBanner />
     </>

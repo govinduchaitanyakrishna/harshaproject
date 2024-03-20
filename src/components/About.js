@@ -13,7 +13,7 @@ const About = () => {
     age: 21,
     gender: "Male",
     college: "vellore institute of technology",
-    guide:"CHRISTY JACKSON J",
+    guide:"KAVYA ALLURU ",
     // Add more profile data fields as needed
   });
 
@@ -114,14 +114,21 @@ const About = () => {
                       aria-labelledby="aboutProject-tab"
                     >
                       <p>
-                        The WaterMap project is an initiative aimed at mapping and monitoring water resources globally. Our mission is to
-                        raise awareness about water scarcity, promote sustainable water management practices, and provide valuable insights into
-                        water-related issues around the world.
-                      </p>
-                      <p>
-                        Through WaterMap, we strive to leverage technology to address water challenges, facilitate data-driven decision-making,
-                        and contribute to a more sustainable and water-secure future.
-                      </p>
+                  Welcome to the About page! Here you can learn more about
+                  comics, ComicCon, and our ComicCon website.
+                </p>
+                <p>
+                  Comics are a form of visual art consisting of images, often
+                  combined with text or other visual information, to convey a
+                  narrative or story. ComicCon is an annual convention
+                  celebrating comics, science fiction, fantasy, and related
+                  popular arts.
+                </p>
+                <p>
+                  Our ComicCon website aims to provide fans with information
+                  about upcoming events, guest appearances, ticketing details,
+                  and more.
+                </p>
                       {/* Add more project-related information */}
                     </div>
                   )}
