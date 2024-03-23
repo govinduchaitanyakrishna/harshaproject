@@ -51,12 +51,12 @@ const ComicBites = () => {
   };
 
   const genBtnStyle = {
-    opacity: prompt ? 1 : 0.5,
+    opacity: prompt ? 1 : 1,
     cursor: prompt ? 'pointer' : 'not-allowed',
   };
 
   const downBtnStyle = {
-    opacity: image ? 1 : 0.5,
+    opacity: image ? 1 : 1,
     cursor: image ? 'pointer' : 'not-allowed',
   };
   return (
