@@ -88,7 +88,7 @@
   color: #333; /* Change text color */
   text-decoration: none;
   top: 30px;
-  
+
   height: 80px;
   width: auto;
 }
@@ -126,7 +126,7 @@
     border-radius: 13px;
     width: 100%;
     height: auto;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0%;
     align-items: stretch;
@@ -153,11 +153,33 @@
   }
   .nav-links-mobile {
     padding: 1.5rem;
-    display: block;
+    display: relative;
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
     width: 90%;
     margin: auto;
+  }
+
+  /* Adjustments for submenu in mobile version */
+  .submenu {
+    display: flex; /* Change display to flex */
+    flex-direction: column; /* Arrange submenu items vertically */
+    position: static; /* Remove absolute positioning */
+    top: auto; /* Remove top positioning */
+    left: auto; /* Remove left positioning */
+    width: 100%; /* Occupy full width */
+    background-color: #fff; /* Reset background color */
+    box-shadow: none; /* Remove box shadow */
+    border-radius: 0; /* Reset border radius */
+  }
+
+  .submenu li {
+    width: auto; /* Reset width */
+  }
+
+  .submenu li a {
+    padding: 10px; /* Reset padding */
+    height: auto; /* Reset height */
   }
 }

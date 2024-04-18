@@ -1,7 +1,7 @@
 export const MenuData = [
   {
     title: "Home",
-    url: "/home",
+    url: "/Home",
     cName: "nav-links",
     icon: "fa-solid fa-house-user"
   },
@@ -18,7 +18,7 @@ export const MenuData = [
     submenu: [
       {
         title: "comicgpt",
-        url: "/comicgpt",
+        url: "https://vitejsvite43k98b-gphl--5173--7dbe22a9.local-credentialless.webcontainer.io/",
         cName: "nav-links-sub",
         icon: "fa-solid fa-bomb"
       },
